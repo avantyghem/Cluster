@@ -16,7 +16,7 @@ from astropy.coordinates import SkyCoord
 from astropy.table import Table
 from uncertainties import ufloat
 
-from BCES import run_MC_BCES
+# from BCES import run_MC_BCES
 from potential import Hogan
 
 
@@ -40,8 +40,8 @@ class Cluster(object):
             c.potential = potential
         return c
 
-    def set_centroid(self, ra, dec):
-        self.centroid = SkyCoord(ra, dec, frame='icrs', unit=(u.hourangle, u.deg))
+    def set_centroid(self, ra, dec, unit=(u.hourangle, u.deg)):
+        self.centroid = SkyCoord(ra, dec, frame='icrs', unit=unit)
 
     def set_centroid_from_file(self, centroid_file):
         with open(centroid_file) as f:
