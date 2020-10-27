@@ -113,7 +113,9 @@ class Cluster(object):
                        entropy = r'Entropy (kev cm$^{2}$)',
                        Lx = r'L$_X$ (erg s$^{-1}$)',
                        tcool = r'$t_{\rm cool}$ (yr)',
-                       M = r'Gas Mass ($M_{\odot}$)')
+                       M = r'Enclosed Mass ($M_{\odot}$)',
+                       Mgas = r'Gas Mass ($M_{\odot}$)',
+                       tcool_tff = r"$t_{\rm cool}/t_{\rm ff}$")
 
         if ax is None:
             fig, ax = plt.subplots(1, 1, figsize=(7,6), constrained_layout=True)
